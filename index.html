@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17251d">
+  <meta name="description" content="La Grange à Manu — du rock, du reggae et de la musique vivante.">
+  <title>La Grange à Manu — Rock & Reggae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="La Grange à Manu, accueil">
+      <span class="brand-mark" aria-hidden="true">GM</span>
+      <span class="brand-name">LA GRANGE<br><b>À MANU</b></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span class="visually-hidden">Ouvrir le menu</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Navigation principale">
+      <a href="#ecoute">Écoute</a>
+      <a href="#photos">En images</a>
+      <a href="#bio">La bande</a>
+      <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Un concert rock en plein air"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Rock · Reggae · Live</p>
+        <h1 id="hero-title">La Grange<br><span>A</span> Manu</h1>
+        <p class="hero-intro">Du groove, des guitares et de la bonne humeur.<br>Bienvenue dans la Grange.</p>
+        <a class="button button-yellow" href="#ecoute">Viens écouter ! <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-note"><span>Pyrénées</span><i aria-hidden="true">✳</i><span>Power</span></div>
+
+    </section>
+
+
+    <section class="listen section-pad" id="ecoute" aria-labelledby="listen-title">
+      <div class="listen-content">
+        <div class="listen-visual">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">La bande-son de la Grange</p>
+            <h2 id="listen-title">À écouter<br><span>sans modération.</span></h2>
+          </div>
+          <div class="record-art" aria-label="Illustration originale, soleil et vinyle">
+            <div class="record-sun"></div>
+            <div class="record-disc"><span></span></div>
+            <span class="record-caption">LIVE<br>SESSION 2025</span>
+            <span class="record-stamp">GM<br>✳</span>
+          </div>
+        </div>
+        <div class="listen-copy">
+          <p>Un pied dans le rock, l’autre dans le reggae. La Grange à Manu, c’est un son qui prend ses racines et qui ne tient pas en place.</p>
+          <p class="listen-small">Les morceaux de la Grange, à écouter ici.</p>
+          <div class="band-player">
+            <p class="current-track" id="current-track" aria-live="polite">Choisis un morceau pour lancer la lecture.</p>
+            <audio id="audio-player" controls preload="metadata">
+              Votre navigateur ne prend pas en charge la lecture audio.
+            </audio>
+            <p class="track-status" id="track-status" aria-live="polite"></p>
+            <ol class="track-list" aria-label="Les cinq morceaux de La Grange à Manu">
+              <li><button class="track-button" type="button" aria-pressed="false" data-title="Morceau 01" data-src="audio/morceau-01.mp3"><span class="track-number">01</span><span>Morceau 01</span><span class="track-play" aria-hidden="true">▶</span></button></li>
+              <li><button class="track-button" type="button" aria-pressed="false" data-title="Morceau 02" data-src="audio/morceau-02.mp3"><span class="track-number">02</span><span>Morceau 02</span><span class="track-play" aria-hidden="true">▶</span></button></li>
+              <li><button class="track-button" type="button" aria-pressed="false" data-title="Morceau 03" data-src="audio/morceau-03.mp3"><span class="track-number">03</span><span>Morceau 03</span><span class="track-play" aria-hidden="true">▶</span></button></li>
+              <li><button class="track-button" type="button" aria-pressed="false" data-title="Morceau 04" data-src="audio/morceau-04.mp3"><span class="track-number">04</span><span>Morceau 04</span><span class="track-play" aria-hidden="true">▶</span></button></li>
+              <li><button class="track-button" type="button" aria-pressed="false" data-title="Morceau 05" data-src="audio/morceau-05.mp3"><span class="track-number">05</span><span>Morceau 05</span><span class="track-play" aria-hidden="true">▶</span></button></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photos section-pad" id="photos" aria-labelledby="photos-title">
+      <div class="photos-heading">
+        <div>
+          <p class="eyebrow">Souvenirs</p>
+          <h2 id="photos-title">En images<span class="yellow-period">.</span></h2>
+        </div>
+        <p>La scène, les copains, les amplis qui chauffent.<br>Quelques instants volés au milieu du bruit.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="photo photo-large">
+          <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85" alt="La foule réunie devant une scène de concert" loading="lazy">
+          <figcaption><span>01</span> Dans le public</figcaption>
+        </figure>
+        <figure class="photo photo-tall">
+          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1000&q=85" alt="Concert en plein air au coucher du soleil" loading="lazy">
+          <figcaption><span>02</span> Plein air, plein cœur</figcaption>
+        </figure>
+        <figure class="photo photo-small">
+          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=85" alt="Lumières et fumée sur une scène de concert" loading="lazy">
+          <figcaption><span>03</span> Ça part en live</figcaption>
+        </figure>
+      </div>
+      <p class="photo-footnote"><span aria-hidden="true">✳</span> Les meilleurs souvenirs ne rentrent pas dans un cadre.</p>
+    </section>
+
+    <section class="bio section-pad" id="bio" aria-labelledby="bio-title">
+      <div class="bio-photo">
+        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1300&q=85" alt="Musiciens sur scène, sous les projecteurs" loading="lazy">
+        <span class="photo-tag">La Grange<br>à manu</span>
+      </div>
+      <div class="bio-copy">
+        <p class="eyebrow eyebrow-dark">Une histoire de potes et de musique</p>
+        <h2 id="bio-title">La Grange,<br>c’est <span>là où tout</span><br>se retrouve.</h2>
+        <p>À la Grange à Manu, on aime les riffs qui accrochent, les rythmes qui balancent et les refrains qu’on reprend tous ensemble. Un peu rock, franchement reggae, toujours libre.</p>
+        <p>On se retrouve autour d’une même idée : faire de la musique, partager le moment et laisser le groove faire le reste.</p>
+        <a class="text-link" href="#contact">Viens nous parler <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="contact-kicker">Un concert ? Une fête ?</div>
+      <h2 id="contact-title">On vient jouer<br><span>chez vous ?</span></h2>
+      <p>Une date, une idée, un bon prétexte pour faire du bruit ? Écris-nous, on en parle.</p>
+      <a class="button button-yellow" href="mailto:contact@lagrangeamanu.fr?subject=Un%20mot%20pour%20La%20Grange%20%C3%A0%20Manu">Écrire à la Grange <span aria-hidden="true">↗</span></a>
+      <span class="contact-flower" aria-hidden="true">✳</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#accueil">
+      <span class="brand-mark" aria-hidden="true">GM</span>
+      <span class="brand-name">LA GRANGE<br><b>À MANU</b></span>
+    </a>
+    <p>Rock & reggae, fait avec le cœur.</p>
+    <a class="back-top" href="#accueil">Retour en haut ↑</a>
+    <small>© 2026 La Grange à Manu</small>
+  </footer>
+</body>
+</html>
